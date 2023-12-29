@@ -1,2 +1,139 @@
-HELLO WORD
-HI
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e1e2e3; /* White background */
+            font-weight: 400;
+        }
+
+        .section {
+            margin: 15px;
+            padding: 25px;
+            background: white;
+        }
+
+        .app-bar {
+            background-color: #fff; /* Blue color for the app bar */
+            color: blue;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        .back-arrow, .menu-dots {
+            cursor: pointer;
+        }
+
+        .boarding-cards {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .not-valid {
+            background: #cf04c9;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .from-to {
+            color: #949292;
+            text-align: center;
+            font-size: 32px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .from-to .from-to-sub {
+                margin-top: 20px;
+                font-size: 16px;
+            }
+
+        .name {
+            color: #616060;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 26px;
+            font-weight: 500;
+            border-top: 2px dotted #616060;
+        }
+
+           .warnig-section {
+               background: #eacaed;
+               display: flex;
+           }
+
+
+           .warnig {
+               width: 30px;
+               height: 30px;
+               background: #cf04c9;
+               margin-right: 30px;
+               text-align: center;
+               font-size: 26px;
+               color: white;
+               border-radius: 15px;
+           }
+
+           .warnig-section .message {
+               font-size: 16px;
+           }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="app-bar">
+        <div class="back-arrow">←</div>
+        <div class="boarding-cards">Beszálló kártyák</div>
+        <div class="menu-dots">☰</div>
+    </div>
+
+    <div class="not-valid section">
+        HOPPÁ, ÚGY TŰNIK, HIÁBA, <br />
+        ÉRVÉNYTELEN BESZÁLLÓ KÁRTYA!
+    </div>
+
+    <div class="section">
+        <div class="from-to">
+            <div>
+                <div>BUD</div>
+                <div class="from-to-sub">Budapest, rendben</div>
+            </div>
+            <div>
+                -
+            </div>
+            <div>
+                <div>???</div>
+                <div class="from-to-sub">de milyen irányba?</div>
+            </div>
+        </div>
+        <div class="name">Szánkó Bálna,</div>
+    </div>
+
+    <div class="section warnig-section">
+        <div class="warnig">!</div>
+        <div class="message">
+            Hol a társa? </br>
+            Míg szívének ninscen párja,</br>
+            sem utjának iránya,</br>
+            hogy indul el a nagyvilgágba?</br>
+            </br>
+            Előbb a végcélt, ha kitalálja,</br>
+            biztos meglesz útitársa.</br>
+            </br>
+            Hova menne mostanában?</br>
+            Keresse meg a lakásban!</br>
+
+        </div>
+    </div>
+</body>
+</html>
