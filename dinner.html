@@ -38,7 +38,7 @@
 
         .app-bar {
             background-color: #fff; /* Blue color for the app bar */
-            color: blue;
+            color: #011875;
             display: flex;
             align-items: center;
             font-size: 24px;
@@ -106,7 +106,7 @@
 
             function checkCode() {
                 const enteredCode = Array.from(codeInputs).map(input => input.value).join('');
-                if (enteredCode === correctCode) {
+                if (enteredCode.toUpperCase() === correctCode.toUpperCase()) {
                     window.location.href = redirectURL;
                 }
             }
