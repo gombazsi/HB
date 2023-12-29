@@ -1,1 +1,110 @@
-code
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .not-valid {
+            background: #cf04c9;
+            color: #cf04c9;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .lock-container {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678129-lock-512.png") !important;
+            background-repeat: no-repeat !important;
+            background-size: contain !important;
+            height: 400px;
+        }
+
+        .code-input {
+            font-size: 1.5rem;
+            padding: 10px;
+            width: 30px;
+            text-align: center;
+            margin: 5px;
+            margin-top: 130px;
+        }
+
+        .app-bar {
+            background-color: #fff; /* Blue color for the app bar */
+            color: blue;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            padding: 10px;
+            font-weight: 500;
+        }
+
+        .back-arrow, .menu-dots {
+            cursor: pointer;
+            font-size: 36px;
+        }
+
+        .back-arrow {
+            font-weight: 700;
+        }
+
+        .boarding-cards {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .section {
+            margin: 15px;
+            padding: 25px;
+            background: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="app-bar">
+        <div class="back-arrow">←</div>
+        <div class="boarding-cards">Beszálló kártyák</div>
+        <div class="menu-dots">☰</div>
+    </div>
+
+    <div class="not-valid section">
+        BÉRELT AUTÓK, ÜLÉS VÁLASZTÁSA,  <br />
+        NEM KELL POGGYÁSZ, INKÁBB A ZÁRDA!
+    </div>
+    <div class="section lock-container">
+        <input type="text" id="code-input-1" class="code-input" pattern="[0-9]" maxlength="1">
+        <input type="text" id="code-input-2" class="code-input" pattern="[0-9]" maxlength="1">
+        <input type="text" id="code-input-3" class="code-input" pattern="[0-9]" maxlength="1">
+        <input type="text" id="code-input-4" class="code-input" pattern="[0-9]" maxlength="1">
+    </div>
+
+
+
+    <script>
+        const codeInputs = document.querySelectorAll('.code-input');
+        const correctCode = '1231'; // Change this to your desired combination
+        const redirectURL = 'happy-birthday.html'; // Change this to the desired URL
+
+        function checkCode() {
+            const enteredCode = Array.from(codeInputs).map(input => input.value).join('');
+            if (enteredCode === correctCode) {
+                window.location.href = redirectURL;
+            }
+        }
+
+        codeInputs.forEach(input => {
+            input.addEventListener('input', checkCode);
+        });
+    </script>
+</body>
+</html>

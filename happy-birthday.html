@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e1e2e3; /* White background */
+            font-weight: 400;
+        }
+
+        .section {
+            margin: 15px;
+            padding: 25px;
+            background: white;
+        }
+
+        .app-bar {
+            background-color: #fff; /* Blue color for the app bar */
+            color: blue;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            padding: 10px;
+            font-weight: 500;
+        }
+
+        .back-arrow, .menu-dots {
+            cursor: pointer;
+            font-size: 36px;
+        }
+
+        .back-arrow {
+            font-weight: 700;
+        }
+
+
+        .boarding-cards {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .from-to {
+            color: #011875;
+            text-align: center;
+            font-size: 32px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 26px;
+        }
+
+            .from-to .from-to-sub {
+                margin-top: 20px;
+                font-size: 16px;
+                margin-bottom: 26px;
+            }
+
+        .name {
+            color: #616060;
+            padding: 15px;
+            font-size: 26px;
+            font-weight: 500;
+            border-top: 2px dotted #616060;
+        }
+
+        .prize-section {
+            background: #eacaed;
+            display: flex;
+        }
+
+        .heart {
+            width: 40px;
+            height: 40px;
+            background: #cf04c9;
+            margin-right: 30px;
+            text-align: center;
+            font-size: 26px;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .prize-section .message {
+            font-size: 16px;
+        }
+
+        .image-section img {
+            width: 100%
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-bar">
+        <div class="back-arrow">←</div>
+        <div class="boarding-cards">Beszálló kártyák</div>
+        <div class="menu-dots">☰</div>
+    </div>
+
+    <div class="section image-section">
+        <img src="https://i.ibb.co/fNpGCJT/barcode.gif">
+    </div>
+
+    <div class="section">
+        <div class="from-to">
+            <div>
+                <div>BUD</div>
+                <div class="from-to-sub">Budapest</div>
+            </div>
+            <div>
+                -
+            </div>
+            <div>
+                <div>RMA</div>
+                <div class="from-to-sub">Róma</div>
+            </div>
+        </div>
+        <div class="name">Szrenkó Blanka</div>
+        <div class="name">Gombás Balázs</div>
+    </div>
+
+    <div class="section prize-section">
+        <div class="heart">❤️</div>
+        <div class="message">
+            Készen áll a beváltásra, </br>
+            Csak súgja fülébe társának:</br>
+            </br>
+            <b>Balázs, vigyél el Rómába!</br></b>
+        </div>
+    </div>
+</body>
+</html>
