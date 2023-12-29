@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet'>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,25 +24,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678129-lock-512.png") !important;
-            background-repeat: no-repeat !important;
-            background-size: contain !important;
-            background-position: center !important;
-            height: 400px;
         }
 
         .code-input {
-            font-size: 1.5rem;
+            font-size: 3rem;
             padding: 10px;
-            width: 30px;
+            width: 50%;
             text-align: center;
             margin: 5px;
-            margin-top: 100px;
+            border-bottom: 1px solid #000;
+            font-family: 'Italianno';
         }
 
         .app-bar {
             background-color: #fff; /* Blue color for the app bar */
-            color: #011875;
+            color: blue;
             display: flex;
             align-items: center;
             font-size: 24px;
@@ -69,43 +66,54 @@
             background: white;
         }
 
+        .riddle-section {
+            text-align: center;
+            font-family: 'Italianno';
+            font-size: 32px;
+        }
+
     </style>
 </head>
 <body>
     <div class="app-bar">
         <div class="back-arrow">←</div>
-        <div class="boarding-cards">Check in</div>
+        <div class="boarding-cards">Extrák</div>
         <div class="menu-dots">☰</div>
     </div>
 
     <div class="not-valid section">
-        AUTÓBÉRLÉS, ÜLÉS VÁLASZTÁSA,  <br />
-        NEM KELL POGGYÁSZ, INKÁBB A ZÁRKA!
+        HOGYHA EZT IS KITALÁLJA,<br />
+        VENDÉGEM EGY VAGYORÁRA.
+    </div>
+
+
+    <div class="section riddle-section">
+        Tészta, ám nem Carbonara.<br />
+        Sajt bármennyi mehet rája.<br />
+        Nem is pizza, nagyobb nála,<br />
+        Mintha többet raknál egymásra.<br />
     </div>
     <div class="section lock-container">
-        <input type="text" id="code-input-1" class="code-input" pattern="[0-9]" maxlength="1">
-        <input type="text" id="code-input-2" class="code-input" pattern="[0-9]" maxlength="1">
-        <input type="text" id="code-input-3" class="code-input" pattern="[0-9]" maxlength="1">
-        <input type="text" id="code-input-4" class="code-input" pattern="[0-9]" maxlength="1">
+        <input type="text" id="code-input-1" class="code-input" maxlength="7">
     </div>
 
 
 
-    <script>
-        const codeInputs = document.querySelectorAll('.code-input');
-        const correctCode = '1231'; // Change this to your desired combination
-        const redirectURL = 'dinner.html'; // Change this to the desired URL
+        <script>
+            const codeInputs = document.querySelectorAll('.code-input');
+            const correctCode = 'lasagna'; // Change this to your desired combination
+            const redirectURL = 'happy-birthday.html'; // Change this to the desired URL
 
-        function checkCode() {
-            const enteredCode = Array.from(codeInputs).map(input => input.value).join('');
-            if (enteredCode === correctCode) {
-                window.location.href = redirectURL;
+            function checkCode() {
+                const enteredCode = Array.from(codeInputs).map(input => input.value).join('');
+                if (enteredCode === correctCode) {
+                    window.location.href = redirectURL;
+                }
             }
-        }
 
-        codeInputs.forEach(input => {
-            input.addEventListener('input', checkCode);
-        });
-    </script>
+            codeInputs.forEach(input => {
+                input.addEventListener('input', checkCode);
+            });
+        </script>
 </body>
 </html>
